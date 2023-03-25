@@ -3,18 +3,18 @@ import { Image, View, StyleSheet } from "react-native";
 import Texto from "../../../components/Texto.js";
 import icon from "../../../../assets/icon.png"
 
-export default function Descricao() {
+export default function Descricao({
+    name, sacolaoLogo, sacolaoName, description, price
+}) {
     return <>
         <View style={styles.cesta}>
-            <Texto style={styles.productName}>Cesta de frutas</Texto>
+            <Texto style={styles.productName}>{name}</Texto>
             <View style={styles.sacolao}>
-                <Image source={icon} style={styles.storeIcon}/>
-                <Texto style={styles.storeName}>Sacolão da Rosa</Texto>
+                <Image source={sacolaoLogo} style={styles.storeIcon}/>
+                <Texto style={styles.storeName}>{sacolaoName}</Texto>
             </View>
-            <Texto style={styles.description}>
-                Uma cesta com produtos cuidadosamente selecionados da horta direto para a sua cozinha
-            </Texto>
-            <Texto style={styles.price}>R$40,00</Texto>
+            <Texto style={styles.description}>{description}</Texto>
+            <Texto style={styles.price}>{price}</Texto>
         </View>
     </>
 }
