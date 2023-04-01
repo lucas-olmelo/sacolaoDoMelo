@@ -1,10 +1,10 @@
 import React from "react";
 import { Image, View, StyleSheet } from "react-native";
 import Texto from "../../../components/Texto.js";
-import icon from "../../../../assets/icon.png"
+import Botao from "../../../components/Botao.js";
 
 export default function Descricao({
-    name, sacolaoLogo, sacolaoName, description, price
+    name, sacolaoLogo, sacolaoName, description, price, text
 }) {
     return <>
         <View style={styles.cesta}>
@@ -15,6 +15,7 @@ export default function Descricao({
             </View>
             <Texto style={styles.description}>{description}</Texto>
             <Texto style={styles.price}>{price}</Texto>
+            <Botao style={styles.button} children={text}/>
         </View>
     </>
 }
@@ -55,5 +56,8 @@ const styles = StyleSheet.create({
         lineHeight: 42,
         marginTop: 8,
         fontWeight: 'bold'
+    },
+    button: {
+        backgroundColor: 'purple',
     }
 });

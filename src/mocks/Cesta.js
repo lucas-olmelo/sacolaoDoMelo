@@ -9,7 +9,8 @@ const cesta = {
         sacolaoLogo: icon,
         sacolaoName: 'Sacolão do Melo',
         description: 'Uma cesta com produtos cuidadosamente selecionados da horta direto para a sua cozinha',
-        price: 'R$50,00'
+        price: 'R$50,00',
+        text: 'Comprar',
     }
 }
 
