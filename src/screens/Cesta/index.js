@@ -10,7 +10,7 @@ export default function Cesta({topo, detalhes, itens}) {
         <FlatList
             data={itens.list}
             renderItem={Item}
-            keyExtractor={({ name }) => (name)}
+            extractorKey={({ name }) => (name)}
             ListHeaderComponent={() => {
                 return <>
                     <Topo {...topo} />
