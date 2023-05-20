@@ -7,6 +7,7 @@ import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-googl
 
 import Cesta from './src/screens/Cesta';
 import Sacolao from './src/screens/Sacolao';
+import Imagens from './src/screens/Imagens';
 import mock from './src/mocks/Cesta';
 
 function MenuCesta(){
@@ -33,6 +34,10 @@ function TabsMenu(){
               iconName = focused 
                 ? 'nutrition' 
                 : 'nutrition-outline';
+            } else if (route.name === 'Imagens') {
+              iconName = focused
+                ? 'camera'
+                : 'camera-outline'
             }
 
             // You can return any component that you like here!
@@ -44,6 +49,7 @@ function TabsMenu(){
       >
         <Tab.Screen name="Cesta de Frutas" component={MenuCesta} /> 
         <Tab.Screen name="O Sacolão" component={Sacolao} /> 
+        <Tab.Screen name="Imagens" component={Imagens} /> 
       </Tab.Navigator>
   );
 }
